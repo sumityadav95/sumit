@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employment Application Form</title>
+    <style>
+        body {
+            background-color: lightgrey;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+        .sidebar {
+            width: 15%;
+            background: orange;
+        }
+        form {
+            width: 50%;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px gray;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+        .birth-date select {
+            width: 32%;
+            display: inline-block;
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo img {
+            width: 150px; /* Adjust size as needed */
+        }
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .checkbox-group label {
+            margin-right: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="logo">
+        <img src="company-logo.png" alt="Company Logo"> <!-- Replace with actual logo URL -->
+    </div>
+
+    <h1 style="text-align: center;">Employment Application Form</h1>
+
+    <div class="container">
+        <div class="sidebar"></div>
+        <form>
+            <!-- Name -->
+            <label for="name">Name *</label>
+            <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
+            <input type="text" id="last-name" name="last-name" placeholder="Last Name" required>
+
+            <!-- Address -->
+            <label for="address">Address *</label>
+            <textarea id="address" name="address" rows="3" placeholder="Enter your full address" required></textarea>
+
+            <!-- Birth Date -->
+            <label for="birth-date">Birth Date *</label>
+            <div class="birth-date">
+                <select name="month" required>
+                    <option value="">Select a month</option>
+                    <option value="Jan">January</option>
+                    <option value="Feb">February</option>
+                    <option value="Mar">March</option>
+                    <!-- Add other months -->
+                </select>
+
+                <select name="day" required>
+                    <option value="">Select a day</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <!-- Add other days -->
+                </select>
+
+                <select name="year" required>
+                    <option value="">Select a year</option>
+                    <option value="2000">2000</option>
+                    <option value="2001">2001</option>
+                    <!-- Add more years -->
+                </select>
+            </div>
+
+            <!-- Phone Number -->
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" placeholder="1000 000 0000" required>
+
+            <!-- Referral Source -->
+            <label for="referral">How were you referred to us? *</label>
+            <div class="checkbox-group">
+                <input type="checkbox" id="walkin" name="referral" value="Walk-in">
+                <label for="walkin">Walk-in</label>
+
+                <input type="checkbox" id="referral" name="referral" value="Referral">
+                <label for="referral">Referral</label>
+
+                <input type="checkbox" id="newspaper" name="referral" value="Newspaper">
+                <label for="newspaper">Newspaper</label>
+
+                <input type="checkbox" id="job-portal" name="referral" value="Online Job Portal">
+                <label for="job-portal">Online Job Portal</label>
+
+                <input type="checkbox" id="social-media" name="referral" value="Social Media">
+                <label for="social-media">Social Media</label>
+
+                <input type="checkbox" id="other" name="referral" value="Other">
+                <label for="other">Other</label>
+            </div>
+
+            <!-- Upload Photo -->
+            <label for="photo">Upload Your Photo *</label>
+            <input type="file" id="photo" name="photo" accept="image/*" required>
+
+            <input type="submit" class="submit-btn" value="Submit">
+        </form>
+        <div class="sidebar"></div>
+    </div>
+
+</body>
+</html>
